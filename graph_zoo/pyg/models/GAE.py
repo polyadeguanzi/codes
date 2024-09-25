@@ -18,17 +18,7 @@ class InnerProductDecoder(torch.nn.Module):
 
 
 class GAE(torch.nn.Module):
-    r"""The Graph Auto-Encoder model from the
-    `"Variational Graph Auto-Encoders" <https://arxiv.org/abs/1611.07308>`_
-    paper based on user-defined encoder and decoder models.
 
-    Args:
-        encoder (torch.nn.Module): The encoder module.
-        decoder (torch.nn.Module, optional): The decoder module. If set to
-            :obj:`None`, will default to the
-            :class:`torch_geometric.nn.models.InnerProductDecoder`.
-            (default: :obj:`None`)
-    """
     def __init__(self, encoder: Module, decoder: Optional[Module] = None):
         super(GAE, self).__init__()
         self.encoder = encoder
